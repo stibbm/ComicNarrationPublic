@@ -44,7 +44,7 @@ I will specify what information to include in each field where the value would n
       "appearance": "less than 10 word summary of the characters appearance",
       "action": "less than 10 word description of characters actions"
   }
-],}
+]}
 
 ```
 "
