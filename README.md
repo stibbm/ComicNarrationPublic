@@ -21,7 +21,7 @@ https://github.com/user-attachments/assets/3f7bd7ac-fda8-4b30-85c7-fefc15bf7e99
 3. Save images to dropbox such that send link with OpenAI request and it can be analyzed ( needs to be publically accessible for this to be possible )
 4. Send request to GPT to get core information about what is going in in each image. The prompt used to do this is as follows:
 
-### Bones Info Prompt
+#### Bones Info Prompt
 
 Generate a compelling script that remains accurate to the manga
 
