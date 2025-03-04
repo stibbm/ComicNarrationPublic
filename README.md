@@ -23,7 +23,7 @@ https://github.com/user-attachments/assets/3f7bd7ac-fda8-4b30-85c7-fefc15bf7e99
 
 ### Bones Info Prompt
 
-"Generate a compelling script that remains accurate to the manga
+Generate a compelling script that remains accurate to the manga
 
 here is some context on the story: 
 
@@ -47,3 +47,12 @@ I will specify what information to include in each field where the value would n
 ]}
 
 ```
+
+5. Send request to GPT to use the barebones info it provided to create a narration. The prompt to create the narration is as follows:
+
+### Skin Info Prompt
+
+combine this information in the following json object(s) into a concise compelling narration of the story. don't redescribe the setting / background unless the characters move to a new location. Only refer to characters Do not add any additional information that is not in the provided information.
+{json}
+
+
