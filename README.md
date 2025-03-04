@@ -50,9 +50,14 @@ I will specify what information to include in each field where the value would n
 
 5. Send request to GPT to use the barebones info it provided to create a narration. The prompt to create the narration is as follows:
 
-### Skin Info Prompt
+##### Skin Info Prompt
+
+```
 
 combine this information in the following json object(s) into a concise compelling narration of the story. don't redescribe the setting / background unless the characters move to a new location. Only refer to characters Do not add any additional information that is not in the provided information.
 {json}
 
+```
+6. Generate audio narration with AI audio voice through AWS polly
 
+7. Combine the manga images and audio narration into a video.
