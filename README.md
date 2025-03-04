@@ -1,5 +1,7 @@
 # Comic Narration Generator
 
+In Progress: Moving code here from the private repo to this public repo to make sure no api keys get leaked
+
 ## Goal
 
 Take manga/manwha and generate AI scripted and AI narrated story video showing the story panels as it narrates
