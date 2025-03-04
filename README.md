@@ -16,12 +16,10 @@ https://github.com/user-attachments/assets/3f7bd7ac-fda8-4b30-85c7-fefc15bf7e99
 
 ## Program Flow
 
-1. PreProcess image files
-2. Split up long image strips into panels
-3. Save images to dropbox such that send link with OpenAI request and it can be analyzed ( needs to be publically accessible for this to be possible )
-4. Send request to GPT to get core information about what is going in in each image. The prompt used to do this is as follows:
-
-#### Bones Info Prompt
+#### 1. PreProcess image files
+#### 2. Split up long image strips into panels
+#### 3. Save images to dropbox such that send link with OpenAI request and it can be analyzed ( needs to be publically accessible for this to be possible )
+#### 4. Send request to GPT to get core information about what is going in in each image. The prompt used to do this is as follows:
 
 Generate a compelling script that remains accurate to the manga
 
@@ -48,9 +46,7 @@ I will specify what information to include in each field where the value would n
 
 ```
 
-5. Send request to GPT to use the barebones info it provided to create a narration. The prompt to create the narration is as follows:
-
-##### Skin Info Prompt
+#### 5. Send request to GPT to use the barebones info it provided to create a narration. The prompt to create the narration is as follows:
 
 ```
 
@@ -58,6 +54,6 @@ combine this information in the following json object(s) into a concise compelli
 {json}
 
 ```
-6. Generate audio narration with AI audio voice through AWS polly
+#### 6. Generate audio narration with AI audio voice through AWS polly
 
-7. Combine the manga images and audio narration into a video.
+#### 7. Combine the manga images and audio narration into a video
