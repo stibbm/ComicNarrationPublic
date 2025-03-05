@@ -16,6 +16,10 @@ https://github.com/user-attachments/assets/3f7bd7ac-fda8-4b30-85c7-fefc15bf7e99
 
 ## Program Flow
 
+
+![ABC drawio](https://github.com/user-attachments/assets/7fe010e1-f475-4fde-a299-4e23d77000e5)
+
+
 #### 1. PreProcess image files
 #### 2. Split up long image strips into panels
 #### 3. Save images to dropbox such that send link with OpenAI request and it can be analyzed ( needs to be publically accessible for this to be possible )
