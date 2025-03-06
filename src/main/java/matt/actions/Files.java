@@ -1,12 +1,26 @@
 package matt.actions;
 
-import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+
+import javax.imageio.ImageIO;
+
+import matt.adapter.PageSizeAdapterImpl;
+import matt.adapter.PageSizeImageAdapter;
+import matt.ffmpegclientjava.ImageConversion;
+import matt.ffmpegclientjava.ImageConversionImpl;
+import matt.ffmpegclientjava.ffmpeg.FFmpegManager;
+import matt.ffmpegclientjava.fuzzynumbers.FuzzyNumbers;
+import matt.ffmpegclientjava.fuzzynumbers.FuzzyNumbersImpl;
+import matt.ffmpegclientjava.model.Size;
+import matt.imageprocessing.service.ImageFileService;
+import matt.imageprocessing.service.RandomFileNamingService;
+import matt.model.ImageData;
+
 
 public class Files {
     private ImageFileService imageFileService;
