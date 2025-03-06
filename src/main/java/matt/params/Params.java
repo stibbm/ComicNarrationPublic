@@ -8,6 +8,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 import matt.constants.Constants;
+import matt.steps.OpenAIModel;
 import software.amazon.awssdk.services.polly.model.Engine;
 import software.amazon.awssdk.services.polly.model.OutputFormat;
 import software.amazon.awssdk.services.polly.model.VoiceId;
@@ -33,10 +34,10 @@ public class Params implements Serializable {
     private String chatGptApiKey;
 
     @Default
-    private Model chatGptModel = Model.GPT_4_O;
+    private OpenAIModel chatGptModel = OpenAIModel.GPT_4_O;
 
     @Default
-    private Model chatGptSkinModel = Model.GPT_4_O;
+    private OpenAIModel chatGptSkinModel = OpenAIModel.GPT_4_O;
 
     private String chatGptPromptFilePath;
 
