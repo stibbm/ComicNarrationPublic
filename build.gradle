@@ -1,17 +1,60 @@
 plugins {
     id 'java'
+    id 'idea'
+    id 'eclipse'
+    id 'java-library'
+    id 'maven-publish'
+    id 'com.github.johnrengelman.shadow' version '8.1.1'
+    id 'application'
+    id 'com.diffplug.spotless' version '6.19.0'
+}
+
+spotless {
+    java {
+        target '**/*.java'
+        googleJavaFormat('1.22.0').aosp() // Use Google's Java format with AOSP style
+        importOrder('java', 'javax', 'org', 'com')
+        removeUnusedImports()
+        trimTrailingWhitespace()
+        endWithNewline()
+    }
+    format 'misc', {
+        target '*.gradle', '*.md', '.gitignore'
+        indentWithSpaces()
+        trimTrailingWhitespace()
+        endWithNewline()
+    }
 }
 
 group = 'matt'
 version = '1.0-SNAPSHOT'
+mainClassName = "matt.Main"
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(17)
+    }
+}
 
 repositories {
     mavenCentral()
 }
 
 dependencies {
+    implementation 'commons-io:commons-io:2.16.1'
+    implementation 'org.apache.commons:commons-collections4:4.5.0-M1'
+    api 'javazoom:jlayer:1.0.1'
     testImplementation platform('org.junit:junit-bom:5.10.0')
     testImplementation 'org.junit.jupiter:junit-jupiter'
+    // Mockito for mocking
+    testImplementation 'org.mockito:mockito-core:4.0.0'
+    testImplementation 'org.mockito:mockito-junit-jupiter:4.0.0'
+
+        // lombok
+    compileOnly 'org.projectlombok:lombok:1.18.32'
+    annotationProcessor 'org.projectlombok:lombok:1.18.32'
+    testCompileOnly 'org.projectlombok:lombok:1.18.32'
+    testAnnotationProcessor 'org.projectlombok:lombok:1.18.32'
 }
 
 test {
