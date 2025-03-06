@@ -38,6 +38,22 @@ java {
 
 repositories {
     mavenCentral()
+    maven {
+        name = "GitHubPackages"
+        url = uri("https://maven.pkg.github.com/stibbm/FfmpegClientJava")
+        credentials {
+            username = "<username>"
+            password = "<password>"
+        }
+    }
+    maven {
+        name = "GitHubPackages"
+        url = uri("https://maven.pkg.github.com/stibbm/ImageProcessingLib")
+        credentials {
+            username = "<username>"
+            password = "<password>"
+        }
+    }
 }
 
 dependencies {
@@ -55,8 +71,10 @@ dependencies {
     annotationProcessor 'org.projectlombok:lombok:1.18.32'
     testCompileOnly 'org.projectlombok:lombok:1.18.32'
     testAnnotationProcessor 'org.projectlombok:lombok:1.18.32'
-
+    api 'matt.imageprocessinglib:imageprocessinglib:1.18';
     api 'software.amazon.awssdk:polly:2.25.64'
+    api 'com.dropbox.core:dropbox-core-sdk:7.0.0'
+    api 'matt.ffmpegclientjava:ffmpegclientjava:1.47'
 }
 
 test {
