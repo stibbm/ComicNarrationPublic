@@ -6,6 +6,8 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import com.dropbox.core.DbxException;
+import com.dropbox.core.v2.files.FileMetadata;
+import com.dropbox.core.v2.sharing.PathLinkMetadata;
 
 public class DropboxShares {
 
